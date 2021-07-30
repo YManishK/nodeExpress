@@ -16,7 +16,7 @@ exports.postUserData = (req,res,next) =>{
         dob : req.body.dob
     })
     .then(result =>{
-        // console.log(result)
+        console.log(result)
         res.redirect('/emp/users');
     })
     .catch(err => console.log("my error",err))

@@ -6,6 +6,6 @@ const admin = require("./admin")
 const controllerProduct = require('../controllers/product')
 
 
-route.get('/',controllerProduct.getProducts);
+route.get('/shop',controllerProduct.getProducts);
 
 module.exports = route;

@@ -34,19 +34,30 @@
         <br>
        
         <% if (prods.length > 0) { %>
+          
+
+          <table class="table table-inverse">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          
+            <tbody>
+              <% for(var i=0 ; i < prods.length; i++) { %>
+                <tr>
+                  <td><%= prods[i].title %></td>
+                  <td><%= prods[i].price %></td>
+                  <td><%= prods[i].description %></td>
+                 
+                </tr>
+             <% } %>
+            </tbody>
+          </table>
 
          
-
-            Product Names : 
-            <% for(var i=0 ; i < prods.length; i++) { %>
-            <ul>
-              <li>
-               
-                <%= prods[i].name %>
-              </li>
-            </ul>
-           
-          <% } %> 
 
          <% }else { %> 
             <h2>No Products</h2>
